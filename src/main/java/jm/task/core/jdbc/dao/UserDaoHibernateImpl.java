@@ -29,9 +29,9 @@ public class UserDaoHibernateImpl implements UserDao {
                         "age INT," +
                         "PRIMARY KEY (id)" +
                         ");", "users");
-        //session.beginTransaction();
+        session.beginTransaction();
         session.createSQLQuery(sql).executeUpdate();
-        //session.getTransaction().commit();
+        session.getTransaction().commit();
     }
 
     @Override
